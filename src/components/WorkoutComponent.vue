@@ -2,9 +2,9 @@
 <template>
   <tbody>
 
-    <tr v-for="item in items" v-bind:key="item.id">
-      <td>{{ item.cardio }} dfgasdrfg</td>
-     <td>{{ item.newWeights }}</td>
+    <tr v-for="item in items" :key="item.id">
+      <td> Cardio {{ item.newCardio }}</td>
+     <td> Weights {{ item.newWeights }}</td>
 
     </tr>
   </tbody>

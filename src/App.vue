@@ -10,7 +10,6 @@
       <weight-input-component @add:item="addItem($event)" />
     </div>
 
-    <button v-on:click="saveWorkout">Save Workout</button>
     
     <div>
       <cardio-exercises
@@ -24,10 +23,13 @@
         @delete:item="deleteItem"
       />
     </div>
+
+      <button v-on:click="saveWorkout">Save Workout</button>
+
     <div>
       <h3>Workout History</h3>
     <workout-component 
-    :workouts="workouts"
+    :items="workouts"
     />
     </div>
     
@@ -103,6 +105,7 @@ export default {
       this.workouts = [...this.workouts, newItem]
       this.cardio = []
       this.weights = []
+
       this.workoutId += 1
       console.log('this.workouts---->', this.workouts)
     },
